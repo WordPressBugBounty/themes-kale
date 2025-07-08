@@ -65,6 +65,54 @@ if ( ! class_exists( 'Kale_Welcome_Page' ) ) {
 		 */
 		private $notification;
 		/**
+		 * Define the html welcome notification content displayed upon activation.
+		 *
+		 * @var string $notification_welcome The html welcome notification content.
+		 */
+		private $notification_welcome;
+		/**
+		 * Define the html get started notification content.
+		 *
+		 * @var string $notification_get_started The html get started notification content.
+		 */
+		private $notification_get_started;
+		/**
+		 * Define the welcome page content.
+		 *
+		 * @var string $welcome_content The welcome page content.
+		 */
+		private $welcome_content;
+		/**
+		 * Define the welcome page title.
+		 *
+		 * @var string $welcome_title The welcome page title.
+		 */
+		private $welcome_title;
+		/**
+		 * Define the default title.
+		 *
+		 * @var string $default_title The default title.
+		 */
+		private $default_title;
+		/**
+		 * Define the theme demo URI.
+		 *
+		 * @var string $theme_demo_uri The theme demo URI.
+		 */
+		private $theme_demo_uri;
+		/**
+		 * Define the theme pro URI.
+		 *
+		 * @var string $theme_pro_uri The theme pro URI.
+		 */
+		private $theme_pro_uri;
+		/**
+		 * Define the theme URI.
+		 *
+		 * @var string $theme_uri The theme URI.
+		 */
+		private $theme_uri;
+		/**
 		 * The single instance of Kale_Welcome_Page
 		 *
 		 * @var Kale_Welcome_Page $instance The  Kale_Welcome_Page instance.
@@ -111,7 +159,7 @@ if ( ! class_exists( 'Kale_Welcome_Page' ) ) {
 
 			// More theme info.
 			$this->theme_pro_uri  = 'https://www.lyrathemes.com/kale-pro/';
-			$this->theme_demo_uri = 'http://www.lyrathemes.com/preview/?theme=kale';
+			$this->theme_demo_uri = 'https://www.lyrathemes.com/preview/?theme=kale';
 
 			// Welcome page info.
 			$this->default_title = sprintf( esc_html__( 'About %s', 'kale' ), $this->theme_name );

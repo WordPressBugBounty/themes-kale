@@ -1,6 +1,22 @@
 
 == Changelog ==
 
+* 2.8
+* 07/07/2025
+* Update: Added class to slider images for lazy loading exclusions
+* Update: Remove blockquote styling/formatting from TikTok embeds
+* Update: Banner image now uses alt text first, with caption as fallback
+* Update: Social icons block size selections are now respected
+* Update: Removed old IE shivs and polyfills
+* New: Support for new X (previously Twitter) social icon
+* Fix: Translation loading triggered too early since WP 6.7
+* Fix: Creation of dynamic properties deprecated in PHP 8.2
+* Fix: Missing dimensions on banner image
+* Fix: Missing autocomplete attributes on comment form
+* Fix: Disassociated labels in comment form
+* Fix: Uncaught TypeError in meta boxes on new installs
+* Fix: Closing div mismatch on page (not post) comments
+
 * 2.7
 * 10/01/2023
 * Update: Screenshot has been optimized to make the themes page faster

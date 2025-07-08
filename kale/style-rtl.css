@@ -4,9 +4,9 @@ Theme URI: https://www.lyrathemes.com/kale/
 Author: LyraThemes
 Author URI: https://www.lyrathemes.com/
 Description: Kale is a charming and elegant, aesthetically minimal and uncluttered food blog theme that can also be used for a variety of purposes. Whether you want to share recipes or fashion tips, run a lifestyle, parenting or cooking blog, Kale is a perfect theme choice. Simple but feature-filled food blog or cooking blog WordPress theme with WooCommerce integration. Beautifully designed and extremely clean, Kale is super easy to set up and is optimized for search engines. Kale comes with a special front page; with featured posts and a large highlight post, the option to show a banner or a posts slider in the header, and RTL support. It also comes with built-in menus for displaying your social media presence, multiple blog feed layouts, text and image logo options, sidebar size options (compact and default), banner/slider color overlay options, multilevel menus, automatically responsive YouTube videos, and much more! Kale is versatile enough to be set up as a small business website as well, by using the a static page as the home page and using the special front page elements to showcase services or portfolio. Kale is backed by world class, one-on-one support, and a super active team of developers and designers ready to help!
-Version: 2.7
-Tested up to: 6.3
-Requires PHP: 5.6
+Version: 2.8
+Tested up to: 6.8
+Requires at least: 6.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 Text Domain: kale
@@ -801,6 +801,7 @@ padding: 10px 28px; font-size: 11px; font-weight: 300; text-transform: uppercase
 .widget .menu-social-container .menu li a[href*="tiktok.com"]::before {content: '\e07b';}
 .widget .menu-social-container .menu li a[href*="tumblr.com"]::before {content: '\f173';}
 .widget .menu-social-container .menu li a[href*="twitter.com"]::before {content: '\f099';}
+.widget .menu-social-container .menu li a[href*="x.com"]::before {content: '\e61b';}
 .widget .menu-social-container .menu li a[href*="vimeo.com"]::before {content: '\f27d';}
 .widget .menu-social-container .menu li a[href*="youtube.com"]::before {content: '\f167';}
 .widget .menu-social-container .menu li a[href*="wordpress.org"]::before,
@@ -810,6 +811,7 @@ padding: 10px 28px; font-size: 11px; font-weight: 300; text-transform: uppercase
 .footer-row-3-center .widget .menu-social-container {text-align:center;}
 .footer-row-3-center .widget .menu-social-container ul li { padding-right:0px; padding-left:0px; }
 .header-row-1 .widget .menu-social-container .menu > li { padding-left: 0px; padding-right: 0px; }
+.wp-block-social-links .wp-social-link a { font-size: inherit; }
 
 
 /* FRONT PAGE - LARGE POST
@@ -844,7 +846,7 @@ padding: 10px 28px; font-size: 11px; font-weight: 300; text-transform: uppercase
 
 .iframe-video, .embed-vimeo, .embed-youtube {position: relative; padding-bottom: 57%; height: 0; overflow: hidden;}
 .iframe-video iframe, .embed-vimeo iframe, .embed-youtube iframe{position: absolute; top: 0; right: 0; width: 100% !important; height: 100% !important; }
-
+blockquote.tiktok-embed {padding: 0; border-left: none;}
 
 /* WOOCOMMERCE
 ------------------------------------------------------------------------*/

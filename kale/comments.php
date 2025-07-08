@@ -12,16 +12,16 @@ $req = get_option( 'require_name_email' );
 $consent  = empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"';
 
 $fields =  array(
-    'author'    =>  '<div class="form-group form-group-author"><label class="form-label form-label-author">'. esc_html__( 'Name', 'kale' ) . ($req ? '<span class="asterik">*</span>' : '') . '</label><input type="text" class="form-control" id="author" name="author" placeholder="" value="' . esc_attr( $commenter['comment_author'] ) . '" /></div>',
+    'author'    =>  '<div class="form-group form-group-author"><label class="form-label form-label-author" for="author">'. esc_html__( 'Name', 'kale' ) . ($req ? '<span class="asterik">*</span>' : '') . '</label><input type="text" class="form-control" name="author" id="author" autocomplete="name" placeholder="" value="' . esc_attr( $commenter['comment_author'] ) . '" /></div>',
 
-    'email'     =>  '<div class="form-group form-group-email"><label class="form-label form-label-email">'. esc_html__( 'Email Address', 'kale' ) .($req ? '<span class="asterik">*</span>' : '') . '</label><input type="email" class="form-control" name="email" id="email" placeholder="" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" /></div>',
+    'email'     =>  '<div class="form-group form-group-email"><label class="form-label form-label-email" for="email">'. esc_html__( 'Email Address', 'kale' ) .($req ? '<span class="asterik">*</span>' : '') . '</label><input type="email" class="form-control" name="email" id="email" autocomplete="email" placeholder="" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" /></div>',
 
-    'url'       => '<div class="form-group form-group-url"><label class="form-label form-label-url">' . esc_html__( 'Website', 'kale' ) . '</label><input type="text" class="form-control" name="url" id="url" placeholder="" value="' . esc_attr( $commenter['comment_author_url'] ) . '" /></div>',
+    'url'       => '<div class="form-group form-group-url"><label class="form-label form-label-url" for="url">' . esc_html__( 'Website', 'kale' ) . '</label><input type="text" class="form-control" name="url" id="url" autocomplete="url" placeholder="" value="' . esc_attr( $commenter['comment_author_url'] ) . '" /></div>',
 
 	'cookies' => '<div class="form-group form-group-cookie"><input id="comment-cookies-consent" name="comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' . '<label for="comment-cookies-consent">' . esc_html__( 'Save my name, email, and website in this browser for the next time I comment.', 'kale' ) . '</label></div>'
 );
 
-$comment_field = '<div class="form-group form-group-comment"><label class="form-label form-label-comment">'. esc_html__( 'Comment', 'kale' ) .'</label><textarea rows="5" cols="" class="form-control" id="comment" name="comment" placeholder=""></textarea></div>';
+$comment_field = '<div class="form-group form-group-comment"><label class="form-label form-label-comment" for="comment">'. esc_html__( 'Comment', 'kale' ) .'</label><textarea rows="5" cols="" class="form-control" id="comment" name="comment" placeholder=""></textarea></div>';
 
 $class_submit = 'btn btn-default';
 $comment_form_args = array(

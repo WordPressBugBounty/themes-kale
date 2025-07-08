@@ -39,14 +39,14 @@ if ($kale_frontpage_banner == 'Posts') {
             <div class="owl-carousel-item">
 			
 				<?php if($kale_frontpage_banner_link_images == 0) { ?>
-					<img src="<?php echo esc_url($featured_image) ?>" alt="<?php the_title_attribute(); ?>" />
+					<img class="kale-slider-img" src="<?php echo esc_url($featured_image) ?>" alt="<?php the_title_attribute(); ?>" />
 					<div class="caption">
 						<p class="date"><?php echo get_the_date(); ?></p>
 						<h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<p class="read-more"><a href="<?php the_permalink(); ?>"><?php printf( _nx( '1 Comment', '%1$s Comments', get_comments_number(), 'comments title', 'kale' ), number_format_i18n( get_comments_number() ) ); ?></a></p>
 					</div>
 				<?php } else { ?>
-					<a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url($featured_image) ?>" alt="<?php the_title_attribute(); ?>" /></a>
+					<a href="<?php the_permalink(); ?>"><img class="kale-slider-img" src="<?php echo esc_url($featured_image) ?>" alt="<?php the_title_attribute(); ?>" /></a>
 				<?php } ?>
             </div>
             <?php }
@@ -60,16 +60,31 @@ if ($kale_frontpage_banner == 'Posts') {
 /*** Banner ***/ 
 
 if($kale_frontpage_banner == 'Banner' || $force_banner) { 
-    $header_image = get_header_image(); 
     $kale_banner_heading = kale_get_option('kale_banner_heading');
     $kale_banner_description = kale_get_option('kale_banner_description');
     $kale_banner_url = kale_get_option('kale_banner_url');
-    if($header_image != '') { 
+    $header = get_custom_header();
+    $header_image_id = attachment_url_to_postid($header->url);
+    $banner_alt = $kale_banner_heading;
+    $width = $header->width;
+    $height = $header->height;
+    if ($header_image_id && empty($banner_alt)) {
+        $banner_alt = get_post_meta($header_image_id, '_wp_attachment_image_alt', true);
+    }
+    $img = '<img src="' . esc_url($header->url) . '" alt="' . esc_attr($banner_alt) . '"';
+    if ($header_image_id) {
+        $srcset = wp_get_attachment_image_srcset($header_image_id, 'full');
+        $sizes = wp_get_attachment_image_sizes($header_image_id, 'full');
+        $img .= ($width && $height ? ' width="' . esc_attr($width) . '" height="' . esc_attr($height) . '"' : '' );
+        $img .= ($srcset ? ' srcset="' . esc_attr($srcset) . '"' : '' );
+        $img .= ($sizes ? ' sizes="' . esc_attr($sizes) . '"' : '' );
+    }
+    $img .= ' />';
 ?>
     <div class="frontpage-banner">
         
         <?php if($kale_frontpage_banner_link_images == 0) { ?>
-            <img src="<?php echo $header_image ?>" alt="<?php echo esc_attr($kale_banner_heading); ?>" />
+            <?php echo $img; ?>
             <div class="caption">
                 <?php if($kale_banner_url != '' && $kale_banner_heading != '') { ?>
                 <h2><a href="<?php echo esc_url($kale_banner_url); ?>"><?php echo esc_html($kale_banner_heading); ?></a></h2>
@@ -83,13 +98,12 @@ if($kale_frontpage_banner == 'Banner' || $force_banner) {
             </div>
         <?php } else { ?>
             <?php if($kale_banner_url != '') { ?><a href="<?php echo esc_url($kale_banner_url); ?>"><?php } ?>
-            <img src="<?php echo $header_image ?>" alt="<?php echo esc_attr($kale_banner_heading); ?>" />
+            <?php echo $img; ?>
             <?php if($kale_banner_url != '') { ?></a><?php } ?>
         <?php } ?>
         
     </div>
 <?php 
-    }
 } 
 ?>
 

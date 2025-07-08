@@ -108,7 +108,7 @@ function kale_customizer_fields( $fields ) {
             '<h1>' . esc_html__('Kale Pro', 'kale') . '</h1>' .
             '<p><a class="button" href="https://www.lyrathemes.com/kale-pro/" target="_blank">Upgrade to Kale Pro</a></p>' .
             '<p>' . esc_html__('Upgrade for the many awesome features and expert support included with the pro version of this theme.', 'kale') . '</p>' .
-            '<p><a class="button" href="http://www.lyrathemes.com/preview/?theme=kale-pro" target="_blank">Kale Pro Demo</a></p>' .
+            '<p><a class="button" href="https://www.lyrathemes.com/preview/?theme=kale-pro" target="_blank">Kale Pro Demo</a></p>' .
             '<p><a class="button" href="https://www.lyrathemes.com/kale/#comparison" target="_blank">Free vs. Pro Comparison</a></p>' .
             '<p><a href="https://www.lyrathemes.com/kale-pro/" target="_blank"><img src="' . esc_url( get_parent_theme_file_uri( 'customize/images/kale-pro-1.jpg' ) ) . '" /></a><br />' .
             '<p><a href="https://www.lyrathemes.com/kale-pro/" target="_blank"><img src="' . esc_url( get_parent_theme_file_uri( 'customize/images/kale-pro-2.jpg' ) ) . '" /></a><br />' .
@@ -118,7 +118,7 @@ function kale_customizer_fields( $fields ) {
             '<h1>' . esc_html__('Current Theme: Kale', 'kale') . '</h1>' .
             '<h3>' . esc_html__('Demo Site', 'kale') . '</h3>' .
             '<p>' . esc_html__('Head on over to the Kale demo to see what you can accomplish with this theme!', 'kale') . '</p>' .
-            '<p><a class="button" href="http://www.lyrathemes.com/preview/?theme=kale" target="_blank">Kale demo</a></p>' .
+            '<p><a class="button" href="https://www.lyrathemes.com/preview/?theme=kale" target="_blank">Kale demo</a></p>' .
             '<h3>Documentation</h3>' .
             '<p>' . esc_html__('Read how to customize the theme, set up widgets, and learn of all the possible options available to you.', 'kale') . '</p>' .
             '<p><a class="button" href="https://help.lyrathemes.com/#collection-181" target="_blank">Kale Documentation</a></p>' .

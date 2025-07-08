@@ -37,6 +37,7 @@ function kale_custom_customize_enqueue() {
 function kale_setup() {
 
     global $kale_defaults;
+    $kale_defaults = kale_get_defaults();
 
     load_theme_textdomain( 'kale', get_template_directory() . '/languages' );
 
@@ -84,6 +85,9 @@ function kale_setup() {
 		add_theme_support( 'woocommerce' );
 	}
 
+    if ( is_admin() ) {
+        require get_parent_theme_file_path( '/welcome-page/welcome-page.php' );
+    }
 }
 add_action( 'after_setup_theme', 'kale_setup' );
 
@@ -155,20 +159,12 @@ function kale_scripts() {
     wp_enqueue_style('kale-style', get_stylesheet_uri(), $deps );
     wp_style_add_data( 'kale-style', 'rtl', 'replace' );
     
-    //WPForms - match WPForms styling to Elara
+    //WPForms - match WPForms styling to Kale
     if ( function_exists( 'wpforms' ) && kale_get_option( 'kale_wpforms_override') ) {
         wp_enqueue_style('wpforms-override', get_parent_theme_file_uri( '/assets/css/wpforms.css'));
     }
 
     /* Scripts */
-
-    // Load html5shiv.min.js
-	wp_enqueue_script( 'kale-html5', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), '3.7.0' );
-	wp_script_add_data( 'kale-html5', 'conditional', 'lt IE 9' );
-    // Load respond.min.js
-	wp_enqueue_script( 'kale-respond', get_template_directory_uri() . '/assets/js/respond.min.js', array(), '1.3.0' );
-	wp_script_add_data( 'kale-respond', 'conditional', 'lt IE 9' );
-
     wp_enqueue_script('bootstrap', get_template_directory_uri().'/assets/js/bootstrap.min.js', array('jquery'), '', true );
     wp_enqueue_script('bootstrap-select', get_template_directory_uri() . '/assets/js/bootstrap-select.min.js', array('jquery','bootstrap'), '', true );
     wp_enqueue_script('smartmenus', get_template_directory_uri() . '/assets/js/jquery.smartmenus.js', array('jquery','bootstrap'), '', true );
@@ -252,11 +248,6 @@ if ( ! isset( $content_width ) ) {
  ------------------------------*/
 require_once get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
-/**
- * Welcome page
- */
-require get_parent_theme_file_path( '/welcome-page/welcome-page.php' );
-
 /*------------------------------
  TGM_Plugin_Activation
  ------------------------------*/
@@ -300,7 +291,7 @@ function kale_register_required_plugins() {
 
 #move comment field to the bottom of the comments form
 function kale_move_comment_field_to_bottom( $fields ) {
-    if ( get_post_type() == 'post' && isset( $fields['cookies'] ) ) :
+    if ( in_array( get_post_type(), ['post', 'page'] ) && isset( $fields['cookies'] ) ) :
         $comment_field = $fields['comment'];
         $cookies       = $fields['cookies'];
         unset( $fields['comment'] );

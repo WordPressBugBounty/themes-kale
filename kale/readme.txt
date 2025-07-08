@@ -1,11 +1,11 @@
 === Kale ===
 
 Author: LyraThemes www.lyrathemes.com
-Requires at least: WordPress 5.0+
-Tested up to: WordPress 6.3
-Version: 2.7
+Requires at least: WordPress 5.2
+Tested up to: WordPress 6.8
+Version: 2.8
 License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
+License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Tags: one-column, two-columns, three-columns, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, featured-images,footer-widgets, full-width-template, theme-options, threaded-comments, translation-ready, food-and-drink
 
 
@@ -36,7 +36,7 @@ For support: support@lyrathemes.com or https://www.lyrathemes.com/support
 
 == Copyright ==
 
-Kale, Copyright 2016-2023 Lyrathemes.com
+Kale, Copyright 2016-2025 Lyrathemes.com
 It is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -51,16 +51,14 @@ GNU General Public License for more details.
 
 The theme uses the following third-party resources:
 
-* HTML5 Shiv v3.7.0 (c) Alexander Farkas. MIT/GPL2. https://github.com/aFarkas/html5shiv
-* Respond.js v1.3.0 (c) Scott Jehl. MIT/GPLv2. https://github.com/scottjehl/Respond
-* Bootstrap v3.4.1 (c) Twitter Inc. MIT. http://getbootstrap.com
-* bootstrap-select v1.5.4 (c) caseyjhol, t0xicCode. MIT. http://silviomoreto.github.io/bootstrap-select/
-* Owl Carousel v1.3.2. MIT. http://owlgraphic.com/owlcarousel/
+* Bootstrap v3.4.1 (c) Twitter Inc. MIT. https://getbootstrap.com
+* bootstrap-select v1.5.4 (c) caseyjhol, t0xicCode. MIT. https://silviomoreto.github.io/bootstrap-select/
+* Owl Carousel v1.3.2. MIT. https://owlgraphic.com/owlcarousel/
 * Kirki v. GPLv2 or later
 * TGM-Plugin-Activation v2.6.1 (c) Thomas Griffin. GPL-2.0+. http://tgmpluginactivation.com/
-* Font Awesome 6.1.1 (c) Fonticons, Inc. Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT. https://fontawesome.com
+* Font Awesome 6.7.2 (c) Fonticons, Inc. Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT. https://fontawesome.com
 * wp-bootstrap-navwalker v2.0.4(c) Edward McIntyre. GPL-2.0. https://github.com/twittem/wp-bootstrap-navwalker
-* SmartMenus jQuery Plugin - v1.1.0 - (c) Vasil Dinkov, Vadikom Web Ltd. MIT http://www.smartmenus.org/
+* SmartMenus jQuery Plugin - v1.1.0 - (c) Vasil Dinkov, Vadikom Web Ltd. MIT https://www.smartmenus.org/
 
 * Images
 
