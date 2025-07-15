@@ -1,6 +1,10 @@
 
 == Changelog ==
 
+* 2.8.1
+* 07/15/2025
+* Fix: Front page banner/header image display issue
+
 * 2.8
 * 07/07/2025
 * Update: Added class to slider images for lazy loading exclusions

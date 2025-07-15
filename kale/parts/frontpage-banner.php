@@ -64,22 +64,23 @@ if($kale_frontpage_banner == 'Banner' || $force_banner) {
     $kale_banner_description = kale_get_option('kale_banner_description');
     $kale_banner_url = kale_get_option('kale_banner_url');
     $header = get_custom_header();
-    $header_image_id = attachment_url_to_postid($header->url);
-    $banner_alt = $kale_banner_heading;
-    $width = $header->width;
-    $height = $header->height;
-    if ($header_image_id && empty($banner_alt)) {
-        $banner_alt = get_post_meta($header_image_id, '_wp_attachment_image_alt', true);
-    }
-    $img = '<img src="' . esc_url($header->url) . '" alt="' . esc_attr($banner_alt) . '"';
-    if ($header_image_id) {
-        $srcset = wp_get_attachment_image_srcset($header_image_id, 'full');
-        $sizes = wp_get_attachment_image_sizes($header_image_id, 'full');
-        $img .= ($width && $height ? ' width="' . esc_attr($width) . '" height="' . esc_attr($height) . '"' : '' );
-        $img .= ($srcset ? ' srcset="' . esc_attr($srcset) . '"' : '' );
-        $img .= ($sizes ? ' sizes="' . esc_attr($sizes) . '"' : '' );
-    }
-    $img .= ' />';
+    if (!empty($header->url)) {
+        $header_image_id = attachment_url_to_postid($header->url);
+        $banner_alt = $kale_banner_heading;
+        $width = $header->width;
+        $height = $header->height;
+        if ($header_image_id && empty($banner_alt)) {
+            $banner_alt = get_post_meta($header_image_id, '_wp_attachment_image_alt', true);
+        }
+        $img = '<img src="' . esc_url($header->url) . '" alt="' . esc_attr($banner_alt) . '"';
+        if ($header_image_id) {
+            $srcset = wp_get_attachment_image_srcset($header_image_id, 'full');
+            $sizes = wp_get_attachment_image_sizes($header_image_id, 'full');
+            $img .= ($width && $height ? ' width="' . esc_attr($width) . '" height="' . esc_attr($height) . '"' : '' );
+            $img .= ($srcset ? ' srcset="' . esc_attr($srcset) . '"' : '' );
+            $img .= ($sizes ? ' sizes="' . esc_attr($sizes) . '"' : '' );
+        }
+        $img .= ' />';
 ?>
     <div class="frontpage-banner">
         
@@ -104,6 +105,7 @@ if($kale_frontpage_banner == 'Banner' || $force_banner) {
         
     </div>
 <?php 
+    }
 } 
 ?>
 
