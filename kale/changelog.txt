@@ -1,6 +1,10 @@
 
 == Changelog ==
 
+* 2.8.2
+* 07/22/2025
+* Fix: Customizer issue with front page banner
+
 * 2.8.1
 * 07/15/2025
 * Fix: Front page banner/header image display issue

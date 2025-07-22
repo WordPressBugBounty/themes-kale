@@ -5,6 +5,9 @@
 #customize-theme-controls #accordion-section-kale_section_theme_info .accordion-section-title { border-left: 4px solid red; }
 #customize-theme-controls #accordion-section-kale_section_theme_info .accordion-section-title:after { color: #ffffff; }
 
+#customize-theme-controls .customize-control-title.header-default,
+#customize-theme-controls .customize-control-title.header-default + .default {display: none;}
+
 #customize-control-kale_theme_info .form-wrap p, 
 #customize-control-kale_theme_info p.description, 
 #customize-control-kale_theme_info p.help, 

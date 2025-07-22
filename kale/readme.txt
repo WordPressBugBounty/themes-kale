@@ -3,7 +3,7 @@
 Author: LyraThemes www.lyrathemes.com
 Requires at least: WordPress 5.2
 Tested up to: WordPress 6.8
-Version: 2.8.1
+Version: 2.8.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Tags: one-column, two-columns, three-columns, right-sidebar, grid-layout, flexible-header, custom-background, custom-colors, custom-header, custom-menu, featured-images,footer-widgets, full-width-template, theme-options, threaded-comments, translation-ready, food-and-drink
