@@ -10,9 +10,10 @@ jQuery(document).ready(function($){
     });
 
 	fluidBox();
-	$(window).load(function(){fluidBox();})
+	$(window).on('load', function(){fluidBox();});
 	$(window).resize(function(){fluidBox();});
 	$('body').addClass('js');
+	if ( $.fn.owlCarousel && $('.owl-carousel').length ) {
 	$(".owl-carousel").owlCarousel({
 		lazyContent:true,
 		loop:true,
@@ -23,7 +24,7 @@ jQuery(document).ready(function($){
 		animateOut: 'fadeOut',
 		animateIn: 'fadeIn'
 	});
-	$("select.form-control").selectpicker();
+	}
 	$(".header-row-1-toggle").click(function(){
 		$(this).toggleClass('open');
 		$('.header-row-1').toggleClass('open');

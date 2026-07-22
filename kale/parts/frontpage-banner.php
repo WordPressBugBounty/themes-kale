@@ -63,6 +63,7 @@ if($kale_frontpage_banner == 'Banner' || $force_banner) {
     $kale_banner_heading = kale_get_option('kale_banner_heading');
     $kale_banner_description = kale_get_option('kale_banner_description');
     $kale_banner_url = kale_get_option('kale_banner_url');
+    $kale_heading_level = ( kale_get_option('kale_image_logo_show') == 1 ? 'h1' : 'h2' );
     $header_image = get_header_image();
     $header = get_custom_header();
     if (!empty($header_image)) {
@@ -89,10 +90,10 @@ if($kale_frontpage_banner == 'Banner' || $force_banner) {
             <?php echo $img; ?>
             <div class="caption">
                 <?php if($kale_banner_url != '' && $kale_banner_heading != '') { ?>
-                <h2><a href="<?php echo esc_url($kale_banner_url); ?>"><?php echo esc_html($kale_banner_heading); ?></a></h2>
+                <<?php echo tag_escape($kale_heading_level); ?>><a href="<?php echo esc_url($kale_banner_url); ?>"><?php echo esc_html($kale_banner_heading); ?></a></<?php echo tag_escape($kale_heading_level); ?>>
                 <?php } ?>
                 <?php if($kale_banner_url == '' && $kale_banner_heading != '') { ?>
-                <h2><?php echo esc_html($kale_banner_heading); ?></h2>
+                <<?php echo tag_escape($kale_heading_level); ?>><?php echo esc_html($kale_banner_heading); ?></<?php echo tag_escape($kale_heading_level); ?>>
                 <?php } ?>
                 <?php if($kale_banner_description != '') { ?>
                 <p class="read-more"><?php echo esc_html($kale_banner_description); ?></p>

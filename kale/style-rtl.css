@@ -4,9 +4,10 @@ Theme URI: https://www.lyrathemes.com/kale/
 Author: LyraThemes
 Author URI: https://www.lyrathemes.com/
 Description: Kale is a charming and elegant, aesthetically minimal and uncluttered food blog theme that can also be used for a variety of purposes. Whether you want to share recipes or fashion tips, run a lifestyle, parenting or cooking blog, Kale is a perfect theme choice. Simple but feature-filled food blog or cooking blog WordPress theme with WooCommerce integration. Beautifully designed and extremely clean, Kale is super easy to set up and is optimized for search engines. Kale comes with a special front page; with featured posts and a large highlight post, the option to show a banner or a posts slider in the header, and RTL support. It also comes with built-in menus for displaying your social media presence, multiple blog feed layouts, text and image logo options, sidebar size options (compact and default), banner/slider color overlay options, multilevel menus, automatically responsive YouTube videos, and much more! Kale is versatile enough to be set up as a small business website as well, by using the a static page as the home page and using the special front page elements to showcase services or portfolio. Kale is backed by world class, one-on-one support, and a super active team of developers and designers ready to help!
-Version: 2.8.2
-Tested up to: 6.8
-Requires at least: 6.0
+Version: 2.9
+Tested up to: 7.0
+Requires at least: 6.8
+Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 Text Domain: kale
@@ -262,10 +263,6 @@ outline-width: 5px;}
 .btn-default, input[type="submit"], input[type="reset"] {background-color:#2d2d2d;border-color:#2d2d2d;color:#fff}
 .btn-default:focus,.btn-default:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="submit"]:focus, input[type="reset"]:focus {background-color:#000;border-color:#000;color:#fff}
 
-.bootstrap-select.btn-group:not(.input-group-btn), .bootstrap-select.btn-group[class*="span"]{margin-bottom:0}
-.bootstrap-select > .btn{border-color:#f1f1f1;background-color:#fafafa;color:#545454;padding:6px 12px;height:34px;font-size:12px;font-style:italic;text-transform:none}
-.bootstrap-select.btn-group .dropdown-menu li > a{text-transform:none;letter-spacing:0;font-style:normal}
-
 .checkbox,
 .radio,
 .checkbox-inline,
@@ -379,12 +376,15 @@ outline-width: 5px;}
 .frontpage-banner:before{width:100%;height:100%;background-color:#555555;opacity:0.15;content:"";position:absolute;right:0;top:0;z-index:2}
 .frontpage-banner > img{max-width:100%;position:relative;z-index:1}
 .frontpage-banner .caption{max-width:75%;z-index:3;color:#fff;text-align:center;width:100%;position:absolute;top:50%;right:50%;-webkit-transform:translate(50%, -50%);-moz-transform:translate(50%, -50%);-ms-transform:translate(50%, -50%);-o-transform:translate(50%, -50%);transform:translate(50%, -50%);}
-.frontpage-banner .caption h2{font-size:48px;margin:0 0 40px;padding:0 0 30px;position:relative;text-transform:uppercase}
-.frontpage-banner .caption h2 a{color:#fff}
+.frontpage-banner .caption h1,.frontpage-banner .caption h2{font-size:48px;margin:0 0 40px;padding:0 0 30px;position:relative;text-transform:uppercase}
+.frontpage-banner .caption h1 a,.frontpage-banner .caption h2 a{color:#fff}
+.frontpage-banner .caption h1 a:hover,
+.frontpage-banner .caption h1 a:focus,
+.frontpage-banner .caption h1 a:active,
 .frontpage-banner .caption h2 a:hover,
 .frontpage-banner .caption h2 a:focus,
 .frontpage-banner .caption h2 a:active{text-decoration:none}
-.frontpage-banner .caption h2:before{content:"";width:35px;border-bottom:2px solid;position:absolute;right:50%;bottom:0;margin-right:-17px;color:#fff}
+.frontpage-banner .caption h1:before,.frontpage-banner .caption h2:before{content:"";width:35px;border-bottom:2px solid;position:absolute;right:50%;bottom:0;margin-right:-17px;color:#fff}
 .frontpage-banner .caption .read-more{text-transform:uppercase;font-weight:700;margin:0}
 .frontpage-banner .caption .read-more a{color:inherit;}
 

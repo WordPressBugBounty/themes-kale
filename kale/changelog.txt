@@ -1,6 +1,14 @@
 
 == Changelog ==
 
+* 2.9
+* 07/22/2026
+* Fix: Comments div mismatch when third party plugins modify comment fields
+* Fix: No H1 present on home page when image logo active
+* Update: Replaced deprecated jQuery function
+* Update: Removed the abandoned Bootstrap Select library
+* Update: Added conditional loading for slider assets
+
 * 2.8.2
 * 07/22/2025
 * Fix: Customizer issue with front page banner
